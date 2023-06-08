@@ -36,7 +36,7 @@ This guide provides step-by-step instructions for installing Kubernetes with Con
      sudo nano /etc/containerd/config.toml
      ```
 
-   - Add the following configuration to the file:
+   -Rreplace the following configuration to the file:
      ```toml
      [plugins."io.containerd.grpc.v1.cri"]
        sandbox_image = "docker.io/library/busybox:latest"
@@ -81,7 +81,7 @@ sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 
    - Enable and start the `kubelet` service:
      ```
-     sudo systemctl enable --now kubelet
+     sudo systemctl enable kubelet
      ```
 
 6. **Initialize the Kubernetes Cluster**
