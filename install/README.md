@@ -103,11 +103,11 @@ sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 7. **Set Up the kubeconfig File**
 
    - Run the following commands to set up the kubeconfig file:
-```
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
-```
+   ```
+   mkdir -p $HOME/.kube
+   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   ```
 
 8. **Install a Network Plugin**
 
