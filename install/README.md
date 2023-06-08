@@ -52,17 +52,17 @@ This guide provides step-by-step instructions for installing Kubernetes with Con
 
    - Install the necessary packages by running the following commands:
      
-```shell
-cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
-[kubernetes]
-name=Kubernetes
-baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
-enabled=1
-gpgcheck=1
-gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
-exclude=kubelet kubeadm kubectl
-EOF
-```
+   ```shell
+   cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+   [kubernetes]
+   name=Kubernetes
+   baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
+   enabled=1
+   gpgcheck=1
+   gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+   exclude=kubelet kubeadm kubectl
+   EOF
+   ```
 
 # Set SELinux in permissive mode (effectively disabling it)
 ```shell
@@ -70,7 +70,7 @@ sudo setenforce 0
 sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 
 sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
-
+```
 
 5. **Enable and Start Services**
 
