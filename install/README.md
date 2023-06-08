@@ -19,7 +19,7 @@ This guide provides step-by-step instructions for installing Kubernetes with Con
 
      ```shell
      sudo yum install -y yum-utils
-     sudo yum-config-manager --add-repo https://download.  docker.com/linux/centos/docker-ce.repo
+     sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
      sudo dnf update
      sudo dnf install -y containerd iproute-tc
      ```
